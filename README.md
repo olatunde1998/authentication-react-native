@@ -15,7 +15,7 @@ I'm Rasheed Olatunde
 
 # Prototype
 
-![Minion](/images/project_prototype.jpeg)
+![Minion](../assets/images/project_prototype.jpeg)
 
 # How to Contribute
 
