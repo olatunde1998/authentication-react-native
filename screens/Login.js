@@ -1,8 +1,12 @@
 import React from "react";
 import { Image, StyleSheet, Text, TextInput, View } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
+import { useNavigation } from "@react-navigation/native";
+
 
 const Login = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.screen}>
       <View>
@@ -36,11 +40,14 @@ const Login = () => {
         <Text style={styles.forgetPasswordText}>Forgot your Password?</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <PrimaryButton onPress={() => alert("Login")}>Login</PrimaryButton>
+        <PrimaryButton onPress={() => navigation.navigate("SignUp")}>
+          Login
+        </PrimaryButton>
       </View>
       <View>
         <Text style={styles.dontHaveAccount}>
-          Don't have an account? Sign Up
+          Don't have an account?{" "}
+          <Text onPress={() => navigation.navigate("SignUp")}>Sign Up</Text>
         </Text>
       </View>
     </View>

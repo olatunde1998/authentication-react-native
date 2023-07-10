@@ -4,8 +4,12 @@ import PrimaryButton from "../components/PrimaryButton";
 import SecondaryButton from "../components/SecondaryButton";
 import colors from "../constants/colors";
 import { Image } from "react-native";
+import { useNavigation } from '@react-navigation/native';
+
 
 const SplashScreen = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.screen}>
       <View>
@@ -19,10 +23,10 @@ const SplashScreen = () => {
         The easiest way to start your application
       </Text>
       <View style={styles.buttonContainer}>
-        <PrimaryButton onPress={() => alert("Login")}>Login</PrimaryButton>
+        <PrimaryButton onPress={() => navigation.navigate('Login')}>Login</PrimaryButton>
       </View>
       <View style={styles.buttonContainer}>
-        <SecondaryButton onPress={() => alert("Login")}>
+        <SecondaryButton onPress={() => navigation.navigate('SignUp')}>
           Sign Up
         </SecondaryButton>
       </View>
