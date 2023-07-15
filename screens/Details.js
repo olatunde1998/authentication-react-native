@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Colors from "../constants/colors";
 import { StatusBar } from "expo-status-bar";
@@ -15,11 +15,18 @@ const Details = () => {
           style={styles.imageContainer}
           source={require("../assets/images/product_one.png")}
         />
-        <View style={styles.backIconContainer} >
-          <Image
-            style={styles.backIcon}
-            source={require("../assets/images/back_icon.png")}
-          />
+        <View style={styles.backIconContainer}>
+          <Pressable
+            onPress={() => {
+              navigation.goBack("SignUp");
+            }}
+            style={styles.backButton}
+          >
+            <Image
+              style={styles.backIcon}
+              source={require("../assets/images/back_icon.png")}
+            />
+          </Pressable>
         </View>
       </View>
       <View style={styles.productContainer}>
@@ -77,6 +84,9 @@ const styles = StyleSheet.create({
   backIcon: {
     width: 32,
     height: 32,
+  },
+  backButton: {
+    width: "100%",
   },
   productContainer: {
     borderTopLeftRadius: 16,
