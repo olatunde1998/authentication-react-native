@@ -67,7 +67,7 @@ const SignUp = () => {
             <Text style={styles.forgetPasswordText}>Forgot your Password?</Text>
           </View>
           <View style={styles.buttonContainer}>
-            <PrimaryButton onPress={() => navigation.navigate("SignUp")}>
+            <PrimaryButton onPress={() => navigation.navigate("Home")}>
               Sign Up
             </PrimaryButton>
           </View>
