@@ -2,7 +2,7 @@ import React from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import Card from "../components/Card";
+import Card from "../../components/Card";
 // import Colors from "../constants/colors";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <View style={styles.headerCrumb}>
         <Image
           style={styles.searchImage}
-          source={require("../assets/images/search_icon.png")}
+          source={require("../../assets/images/search_icon.png")}
         />
         <Text style={styles.headerCrumbText}>Find All You Need</Text>
       </View>

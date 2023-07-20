@@ -2,6 +2,7 @@ import React from "react";
 import {
   Image,
   ImageBackground,
+  Pressable,
   StyleSheet,
   Text,
   TextInput,
@@ -14,6 +15,10 @@ import Colors from "../../constants/colors";
 
 const Login = () => {
   const navigation = useNavigation();
+
+  const forgetHandler = () => {
+    return navigation.navigate("Profile");
+  }
 
   return (
     <LinearGradient
@@ -54,9 +59,9 @@ const Login = () => {
               autoCorrect={false}
             />
           </View>
-          <View style={styles.forgetPasswordContainer}>
+          <Pressable onPress={forgetHandler} style={styles.forgetPasswordContainer}>
             <Text style={styles.forgetPasswordText}>Forgot your Password?</Text>
-          </View>
+          </Pressable>
           <View style={styles.buttonContainer}>
             <PrimaryButton onPress={() => navigation.navigate("Details")}>
               Login
